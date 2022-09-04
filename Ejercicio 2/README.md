@@ -23,3 +23,53 @@ Para el ejercicio se pide
 #### 👩‍💻 Parte 3
 **Aplique patrónes/principios según su crítica.**
 
+# 1
+Haría falta agregar dos clases más para especificar datos del paciente y del médico, ya que la clase existente es de la consulta médica y no permite agregar esos datos.
+Tampoco hay getters ni setters sobre los atributos de la clase.
+
+# 2
+
+Las tarjetas CRC quedarían:
+
+[
+  {
+    "name": "PatientInfo",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Almacenar los datos del paciente",
+      "Validar datos del paciente"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "DoctorInfo",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Almacenar los datos del doctor",
+      "Validar datos del doctor"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "AppointmentService",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Armar la consulta",
+      "Validar datos de la consulta"
+    ],
+    "collaborators": [
+      "DoctorInfo",
+      "PatientInfo"
+    ]
+  }
+]

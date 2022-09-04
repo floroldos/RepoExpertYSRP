@@ -10,24 +10,6 @@ namespace Library
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
 
-            if (string.IsNullOrEmpty(name))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'name' is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(id))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'id' is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(phoneNumber))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'phone number' is required\n");
-                isValid = false;
-            }
-
             if (string.IsNullOrEmpty(appoinmentPlace))
             {
                 stringBuilder.Append("Unable to schedule appointment, 'appoinment place' is required\n");
