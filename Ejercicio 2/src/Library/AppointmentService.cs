@@ -5,7 +5,7 @@ namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        public static string CreateAppointment(DateTime date, string appoinmentPlace)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
@@ -13,13 +13,6 @@ namespace Library
             if (string.IsNullOrEmpty(appoinmentPlace))
             {
                 stringBuilder.Append("Unable to schedule appointment, 'appoinment place' is required\n");
-                isValid = false;
-            }
-
-
-            if (string.IsNullOrEmpty(doctorName))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'doctor name' is required\n");
                 isValid = false;
             }
 
